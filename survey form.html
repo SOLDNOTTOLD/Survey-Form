@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Survey Form</title>
+</head>
+<body>
+    <style>
+        label {
+            font-size: 1.125rem;
+            margin: auto;
+        }
+        body {
+            font-family: Bebas Neue;
+            color: white;
+            background-color: rgb(255, 90, 90);
+
+        }
+        h1 {
+            text-align: center;
+            margin: auto;
+        }
+        p {
+            text-align: center;
+        }
+        .form-control {
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        .input-radio {
+            margin-left: auto;
+            display: auto;
+            
+        }
+        .submit-button {
+            margin: auto;
+        }
+        button {
+            transition-duration: 0.4s;
+            border-radius: 10px;
+        }
+        button:hover {
+            background-color: blue;
+            color: white;
+        }
+        .center {
+            display: block;
+            margin: auto;
+            width: 30%;
+        }
+        .form-group {
+           text-align: center; 
+        }
+        .submit-button {
+            margin:auto
+            display: block;
+        }
+
+    </style>
+<div class="container">
+    <header class="header">
+        <h1 id="title" class="text-header">Customer Satisfaction Survey Form</h1>
+        <p id="description" class="description text">Thank you for shopping with us!
+        Please fill out the following survey below:
+        </p>
+    </header>
+    <form id="survey-form">
+        <div class="form-group">
+            <label id="name-label" for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control center"
+                   placeholder="Enter your name"required>
+        </div>
+        <div class="form-group">
+            <label id="email-label" for="email">Email Address</label>
+            <input type="email" name="email" id="email" class="form-control center"
+                   placeholder="Enter your email address"required>
+        </div>
+        <div class="form-group">
+            <label id="number-label" for="number">Age</label>
+            <input type="number" name="age" id="number" min="18" max="99"
+                   class="form-control center" placeholder="Age"required>
+        </div>
+        <div class="form-group">
+            <p>How would you describe your shopping experience with us today?</p>
+            <select id="dropdown" name="experience" class="form-control center" required>
+                <option disable selected value>Select</option>
+                <option value="excellent">Excellent</option>
+                <option value="great">Great</option>
+                <option value="good">Good</option>
+                <option value="needs improvement">Needs Improvement</option>
+                <option value="poor">Poor</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p>Would you recommend our store to another customer?</p>
+            <label>
+                <input name="use-recommend" value="yes" type="radio"
+            class="input-radio center" checked>Yes
+            </label>
+            <label>
+                <input name="user recommend" value="no" type="radio"
+            class="input-radio center">No
+            </label>
+        </div>
+        <div class="form-group">
+             <p> Any comments or suggestions on ways we can improve?</p>
+             <textarea id="comments" class="input-textarea" name="comments"
+             cols="45" rows="15" placeholder="Enter your comments here..."></textarea>
+        </div>
+        <div class=".submit-button">
+            <button type="submit" id="submit" class="submit-button center">Submit
+            </button>
+        </div>
+    </form>
+</div>                   
+</body>
+</html>
